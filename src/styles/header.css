@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Space Grotesk';
+  padding: 10px 20px;
+}
+
+.right {
+  text-align: right;
+}
+
+#top-text {
+  color: #7a7a7a;
+}
+
+#app-title,
+#local-time {
+  color: #f2f3f4;
+}

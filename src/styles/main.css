@@ -1,0 +1,42 @@
+main {
+  font-family: 'Space Grotesk', sans-serif;
+  align-self: center;
+
+  #main-info {
+    display: flex;
+    flex-direction: column;
+
+    #location {
+      font-size: 3.5rem;
+      font-weight: bold;
+      width: max-content;
+    }
+    #temperature {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+
+    .temperature {
+      display: flex;
+      gap: 10px;
+
+      .temp-info {
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+
+        #temp-description {
+          font-size: 1.25rem;
+          color: #2986e4;
+          font-weight: 500;
+        }
+
+        #temp-feels {
+          font-size: 0.8rem;
+          color: #7a7a7a;
+        }
+      }
+    }
+  }
+}
