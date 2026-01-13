@@ -10,7 +10,8 @@ input.addEventListener('keydown', e => {
       .then(res => res.json())
       .then(data => {
         mainInfo.innerHTML = `
-            <p id="location">${e.target.value}</p>
+            <p id="location">${data.name || e.target.value}</p>
+            <p id="local-time"></p>
             <hr style="color: #2986e4" />
             <div class="temperature">
               <p id="temperature">${data.main.temp.toFixed(0)}°C</p>
@@ -20,15 +21,15 @@ input.addEventListener('keydown', e => {
                   Feels like ${data.main.feels_like.toFixed(0)}°C
                 </span>
               </div>
-            </div> 
+            </div>
           `
         mainInfo.style.opacity = 1
 
-        function formatTime(unix, timezone, locale = 'pt-BR') {
-          return new Date((unix + timezone) * 1000).toLocaleTimeString(locale, {
-            hour: '2-digit',
-            minute: '2-digit',
-          })
+        function formatTime(unix, timezone) {
+          const date = new Date((unix + timezone) * 1000)
+          const hours = String(date.getUTCHours()).padStart(2, '0')
+          const minutes = String(date.getUTCMinutes()).padStart(2, '0')
+          return `${hours}:${minutes}`
         }
 
         document.querySelector('#local-time').textContent = formatTime(
