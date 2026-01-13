@@ -16,7 +16,7 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <header>
+    <header class="container">
       <div class="left">
         <p id="top-text">Global Weather Service</p>
         <p id="app-title">SHRATER</p>
@@ -24,26 +24,21 @@
 
       <div class="right">
         <p id="top-text">LOCAL TIME</p>
-        <p id="local-time">--:--:--</p>
+        <p id="local-time">--:--</p>
       </div>
     </header>
 
-    <main>
+    <main class="container">
       <section id="main-info">
-        <p id="location">New York</p>
-        <hr style="; color: #2986e4" />
-        <div class="temperature">
-          <p id="temperature">32°C</p>
-          <div class="temp-info">
-            <span id="temp-description">Overcast</span>
-            <span id="temp-feels">Feels like 9°C</span>
-          </div>
+        <div class="search">
+          <label for="city-input">Your city</label>
+          <input id="city-input" type="text" />
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>dadsadsadsa</p>
+    <footer class="container">
+      <p>© 2026 Shrather. All rights reserved.</p>
     </footer>
   </body>
 </html>

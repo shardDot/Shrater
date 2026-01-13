@@ -1,41 +1,62 @@
 main {
   font-family: 'Space Grotesk', sans-serif;
   align-self: center;
+}
 
-  #main-info {
+#main-info {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+
+  .search {
     display: flex;
     flex-direction: column;
 
-    #location {
-      font-size: 3.5rem;
-      font-weight: bold;
-      width: max-content;
-    }
-    #temperature {
-      font-size: 5rem;
-      font-weight: bold;
+    label {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
-    .temperature {
+    input {
+      padding: 10px;
+      font-size: 1.25rem;
+      border: 2px solid #2986e4;
+      border-radius: 8px;
+      outline: none;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  }
+
+  #location {
+    font-size: 3.5rem;
+    font-weight: bold;
+    width: max-content;
+    max-width: 400px;
+  }
+  #temperature {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
+  .temperature {
+    display: flex;
+    gap: 10px;
+
+    .temp-info {
+      align-self: end;
       display: flex;
-      gap: 10px;
+      flex-direction: column;
 
-      .temp-info {
-        align-self: end;
-        display: flex;
-        flex-direction: column;
-        word-wrap: break-word;
+      #temp-description {
+        font-size: 1.25rem;
+        color: #2986e4;
+        font-weight: 500;
+      }
 
-        #temp-description {
-          font-size: 1.25rem;
-          color: #2986e4;
-          font-weight: 500;
-        }
-
-        #temp-feels {
-          font-size: 0.8rem;
-          color: #7a7a7a;
-        }
+      #temp-feels {
+        font-size: 0.8rem;
+        color: #7a7a7a;
       }
     }
   }

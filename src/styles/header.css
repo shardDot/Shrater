@@ -1,5 +1,6 @@
 header {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   font-family: 'Space Grotesk';
   padding: 10px 20px;
@@ -16,4 +17,17 @@ header {
 #app-title,
 #local-time {
   color: #f2f3f4;
+}
+
+@media (min-width: 868px) {
+  #app-title {
+    font-size: 1.5rem;
+  }
+  #local-time {
+    font-size: 1.25rem;
+  }
+
+  #top-text {
+    font-size: 1.2rem;
+  }
 }

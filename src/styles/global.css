@@ -12,3 +12,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
